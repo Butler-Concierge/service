@@ -108,10 +108,10 @@
         /* --- 左上のロゴ設定（更新版） --- */
         .site-logo {
             position: absolute;
-            top: 25px;
+            top: 35px;
             left: 30px;
-            color: #e0e0e0;
-            font-size: 1.2rem;
+            color: #c5a059;
+            font-size: 1.3rem;
             font-weight: 600;
             z-index: 100;
             letter-spacing: 0.15em;
@@ -126,6 +126,41 @@
         /* --- 画面全体の滑らかな動き --- */
         html {
             scroll-behavior: smooth; /* 瞬時に飛ばず、スルスルっと動く設定 */
+        }
+        /* --- 3つの項目の設定 --- */
+        .services {
+            padding: 50px 0;
+            background-color: #0f0f0f; /* 背景を少しだけ明るくして区別 */
+        }
+
+        .service-grid {
+            display: flex;
+            justify-content: space-between; /* 均等に配置 */
+            gap: 20px; /* 箱と箱の間隔 */
+            flex-wrap: wrap; /* スマホで折り返す設定 */
+        }
+
+        .service-item {
+            flex: 1; /* 3等分にする */
+            min-width: 250px; /* 狭すぎたら折り返す */
+            border: 1px solid #c5a059; /* 金色の枠線 */
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s; /* 動きの設定 */
+        }
+
+        .service-item:hover {
+            background-color: #1a1a1a;
+            transform: translateY(-5px); /* カーソルを乗せると少し浮く */
+        }
+
+        .service-item h3 {
+            color: #c5a059;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -151,7 +186,28 @@
             <a href="#" class="btn">執事の手配について</a>
         </div>
     </section>
+    <section class="services">
+        <div class="container">
+            <h2 class="gold-text" style="font-size: 1.5rem; margin-bottom: 40px;">Our Services</h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Afternoon Tea</h3>
+                    <p>至高の紅茶と手作りのお菓子で、<br>優雅な午後のひとときを。</p>
+                </div>
 
+                <div class="service-item">
+                    <h3>Dinner</h3>
+                    <p>旬の食材を活かした料理で、<br>心満たされる晩餐を演出します。</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>Escort</h3>
+                    <p>観劇やショッピングの随行。<br>貴方の影となりサポート致します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         &copy; 2025 Private Butler Service. All Rights Reserved.
     </footer>
