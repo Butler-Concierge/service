@@ -168,7 +168,16 @@
             /* 少しリッチなグラデーション背景 */
             background: linear-gradient(to bottom, #0a0a0a, #151515);
             text-align: center;
-            border-top: 1px solid #333;
+            /* ★修正1：線を消しました */
+   　　　　　border-top: none;
+
+   　　　　　/* ★修正2：強制的に画面の端まで横幅を広げる魔法の記述 */
+   　　　　　width: 100vw;
+   　　　　　position: relative;
+   　　　　　left: 50%;
+   　　　　　right: 50%;
+   　　　　  margin-left: -50vw;
+   　　　　  margin-right: -50vw;
         }
     </style>
 </head>
